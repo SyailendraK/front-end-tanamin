@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-import TanamInLogoImg from '../../../assets/images/AuthPage/Logo-TanamIn.png';
+import TanamInLogoImg from '../../../assets/images/AuthPage/logo-TanamIn.png';
 
 const LogoContainer = styled.div`
   ${tw`
