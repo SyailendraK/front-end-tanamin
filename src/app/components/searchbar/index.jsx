@@ -19,7 +19,7 @@ const SearchBarContainer = styled.div`
 
 const InputButton = styled.button`
   ${tw`
-    w-min
+    w-10
   `};
 `;
 
@@ -50,7 +50,7 @@ const InputContainer = styled.div`
   }
 `;
 
-export default function Logo() {
+export default function SearchBar() {
   return (
     <SearchBarContainer>
       <InputButton>

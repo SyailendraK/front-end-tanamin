@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 import SearchBar from '../../components/searchbar';
+import NavBarMobile from '../../components/navbar-mobile';
 
 import UserAvatarImg from '../../../assets/images/HomePage/user.png';
 import MessageIcon from '../../../assets/images/HomePage/icon-message.png';
@@ -97,6 +98,7 @@ const SearchBarContainer = styled.div`
 export default function HomePage() {
   return (
     <HomePageContainer>
+      <NavBarMobile />
       <UserContainer>
         <LeftUserContainer>
           <p>Hallo</p>
