@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 import './App.css';
 
+import AccountPage from './app/containers/AccountPage';
 // import AuthenticationPage from './app/containers/AuthenticationPage';
-import ShoppingCartPage from './app/containers/ShoppingCartPage';
+// import ShoppingCartPage from './app/containers/ShoppingCartPage';
 // import HomePage from './app/containers/HomePage';
 
 const AppContainer = styled.div`
@@ -19,7 +20,8 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      <ShoppingCartPage />
+      <AccountPage />
+      {/* <ShoppingCartPage /> */}
       {/* <AuthenticationPage /> */}
       {/* <HomePage /> */}
     </AppContainer>

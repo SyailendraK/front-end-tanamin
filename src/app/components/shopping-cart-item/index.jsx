@@ -132,7 +132,7 @@ const CountNumber = styled.p`
   `};
 `;
 
-export default function ShoppingCartItem({ name = 'Tomat', price = 21000, img = ProductImg }) {
+export default function ShoppingCartItemComponent({ name = 'Tomat', price = 21000, img = ProductImg }) {
   const formatter = new Intl.NumberFormat('de-DE');
 
   return (

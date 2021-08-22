@@ -50,7 +50,7 @@ const InputContainer = styled.div`
   }
 `;
 
-export default function SearchBar() {
+export default function SearchBarComponent() {
   return (
     <SearchBarContainer>
       <InputButton>

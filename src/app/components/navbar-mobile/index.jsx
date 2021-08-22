@@ -48,7 +48,7 @@ const Icon = styled(FontAwesomeIcon)`
   `};
 `;
 
-export default function NavBarMobile() {
+export default function NavBarMobileComponent() {
   return (
     <NavBarMobileContainer>
       <IconsContainer>

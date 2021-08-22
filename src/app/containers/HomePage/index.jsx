@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-import SearchBar from '../../components/searchbar';
-import NavBarMobile from '../../components/navbar-mobile';
+import SearchBarComponent from '../../components/search-bar';
+import NavBarMobileComponent from '../../components/navbar-mobile';
 
 import UserAvatarImg from '../../../assets/images/HomePage/user.png';
 import MessageIcon from '../../../assets/images/HomePage/icon-message.png';
@@ -57,6 +57,13 @@ const RightUserContainer = styled.div`
   `};
 `;
 
+const MessageButton = styled.button`
+  ${tw`
+    w-full
+    mr-2
+  `};
+`;
+
 const MessageIconContainer = styled.div`
   ${tw`
     flex
@@ -64,7 +71,6 @@ const MessageIconContainer = styled.div`
     h-auto
     items-center
     align-middle
-    mr-2
   `};
 
   p{
@@ -85,6 +91,12 @@ const MessageIconContainer = styled.div`
   }
 `;
 
+const ProfileAvatarButton = styled.button`
+  ${tw`
+    w-full
+  `};
+`;
+
 const SearchBarContainer = styled.div`
   ${tw`
     flex
@@ -98,22 +110,26 @@ const SearchBarContainer = styled.div`
 export default function HomePage() {
   return (
     <HomePageContainer>
-      <NavBarMobile />
+      <NavBarMobileComponent />
       <UserContainer>
         <LeftUserContainer>
           <p>Hallo</p>
           <h1>Muhammad Fikry</h1>
         </LeftUserContainer>
         <RightUserContainer>
-          <MessageIconContainer>
-            <img src={MessageIcon} alt="Message Icon" />
-            <p>3</p>
-          </MessageIconContainer>
-          <img src={UserAvatarImg} alt="User Avatar" />
+          <MessageButton aria-label="Message">
+            <MessageIconContainer>
+              <img src={MessageIcon} alt="Message Icon" />
+              <p>3</p>
+            </MessageIconContainer>
+          </MessageButton>
+          <ProfileAvatarButton aria-label="User Avatar">
+            <img src={UserAvatarImg} alt="User Avatar" />
+          </ProfileAvatarButton>
         </RightUserContainer>
       </UserContainer>
       <SearchBarContainer>
-        <SearchBar />
+        <SearchBarComponent />
       </SearchBarContainer>
     </HomePageContainer>
   );

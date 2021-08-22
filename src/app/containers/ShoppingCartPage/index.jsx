@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowLeft,
-} from '@fortawesome/free-solid-svg-icons';
-import ShoppingCartItem from '../../components/shoppingcart-item';
+
+import ShoppingCartItem from '../../components/shopping-cart-item';
 
 import ProductImg from '../../../assets/images/ShoopingCartPage/tomatoes.png';
+import TitleSectionComponent from '../../components/title-section';
 
 const ShoppingCartContainer = styled.div`
   ${tw`
@@ -19,46 +17,46 @@ const ShoppingCartContainer = styled.div`
   `};
 `;
 
-const TitleContainer = styled.div`
-  ${tw`
-    flex
-    w-9/12
-    items-center
-    justify-center
-  `};
-`;
+// const TitleContainer = styled.div`
+//   ${tw`
+//     flex
+//     w-9/12
+//     items-center
+//     justify-center
+//   `};
+// `;
 
-const TitleSection = styled.div`
-  ${tw`
-    flex
-    flex-row
-    w-full
-    m-5
-  `};
-`;
+// const TitleSection = styled.div`
+//   ${tw`
+//     flex
+//     flex-row
+//     w-full
+//     m-5
+//   `};
+// `;
 
-const BackButton = styled.button` 
-  ${tw`
-    flex
-    justify-start
-  `};
-`;
+// const BackButton = styled.button`
+//   ${tw`
+//     flex
+//     justify-start
+//   `};
+// `;
 
-const Icon = styled(FontAwesomeIcon)`
-  ${tw`
-    text-2xl
-    text-center
-  `};
-`;
+// const Icon = styled(FontAwesomeIcon)`
+//   ${tw`
+//     text-2xl
+//     text-center
+//   `};
+// `;
 
-const Title = styled.h1`
-  ${tw`
-    flex
-    text-lg 
-    text-center
-    font-bold
-  `};
-`;
+// const Title = styled.h1`
+//   ${tw`
+//     flex
+//     text-lg
+//     text-center
+//     font-bold
+//   `};
+// `;
 
 const ItemsContainer = styled.div`
   ${tw`
@@ -139,14 +137,7 @@ const SubTotalCheckoutButtonText = styled.p`
 export default function ShoppingCart() {
   return (
     <ShoppingCartContainer>
-      <TitleSection>
-        <BackButton aria-label="Back Button">
-          <Icon icon={faArrowLeft} />
-        </BackButton>
-        <TitleContainer>
-          <Title>Keranjang</Title>
-        </TitleContainer>
-      </TitleSection>
+      <TitleSectionComponent title="Keranjang" />
       <ItemsContainer>
         <ShoppingCartItem name="Tomatoes" price="19000" img={ProductImg} />
         <ShoppingCartItem name="Tomato" price="22000" img={ProductImg} />

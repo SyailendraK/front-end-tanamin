@@ -19,7 +19,7 @@ const Image = styled.div`
   }
 `;
 
-export default function Logo() {
+export default function LogoComponent() {
   return (
     <LogoContainer>
       <Image>

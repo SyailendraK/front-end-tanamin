@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-import Logo from '../../components/logo';
+import LogoComponent from '../../components/logo';
 
 import AuthBgImg from '../../../assets/images/AuthPage/bg-auth.png';
 
@@ -108,7 +108,7 @@ export default function HomePage() {
   return (
     <AuthenticationContainer>
       <LogoContainer>
-        <Logo />
+        <LogoComponent />
       </LogoContainer>
       <LoginButton>Masuk</LoginButton>
       <RegisterButton>Daftar</RegisterButton>
