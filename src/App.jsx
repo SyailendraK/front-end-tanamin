@@ -4,7 +4,8 @@ import tw from 'twin.macro';
 import './App.css';
 
 // import AuthenticationPage from './app/containers/AuthenticationPage';
-import HomePage from './app/containers/HomePage';
+import ShoppingCartPage from './app/containers/ShoppingCartPage';
+// import HomePage from './app/containers/HomePage';
 
 const AppContainer = styled.div`
   ${tw`
@@ -18,7 +19,9 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      <HomePage />
+      <ShoppingCartPage />
+      {/* <AuthenticationPage /> */}
+      {/* <HomePage /> */}
     </AppContainer>
   );
 }

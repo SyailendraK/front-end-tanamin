@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
-
-import SearchIcon from '../../../assets/images/HomePage/icon-search.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faHome, faShoppingBasket, faGraduationCap, faUserAlt,
+} from '@fortawesome/free-solid-svg-icons';
 
 const NavBarMobileContainer = styled.div`
   ${tw`
@@ -25,18 +27,12 @@ const IconsContainer = styled.div`
   `};
 `;
 
-const IconContainer = styled.div`
+const IconContainer = styled.button`
   ${tw`
     flex
     flex-col
     items-center
   `};
-
-  img{
-    ${tw`
-      w-6
-    `};
-  }
 
   p{
     ${tw`
@@ -45,24 +41,31 @@ const IconContainer = styled.div`
   }
 `;
 
+const Icon = styled(FontAwesomeIcon)`
+  ${tw`
+    text-2xl
+    focus:text-green-600
+  `};
+`;
+
 export default function NavBarMobile() {
   return (
     <NavBarMobileContainer>
       <IconsContainer>
         <IconContainer>
-          <img src={SearchIcon} alt="Search Icon" />
+          <Icon icon={faHome} />
           <p>Beranda</p>
         </IconContainer>
         <IconContainer>
-          <img src={SearchIcon} alt="Search Icon" />
+          <Icon icon={faShoppingBasket} />
           <p>Keranjang</p>
         </IconContainer>
         <IconContainer>
-          <img src={SearchIcon} alt="Search Icon" />
+          <Icon icon={faGraduationCap} />
           <p>Edukasi</p>
         </IconContainer>
         <IconContainer>
-          <img src={SearchIcon} alt="Search Icon" />
+          <Icon icon={faUserAlt} />
           <p>Akun</p>
         </IconContainer>
       </IconsContainer>

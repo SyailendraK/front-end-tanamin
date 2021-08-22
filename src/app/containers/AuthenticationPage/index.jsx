@@ -48,7 +48,7 @@ const LoginButton = styled.button`
     mt-20
   `};
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
-  background-image: linear-gradient(to right, #479617 , #B3C765);
+  background-image: linear-gradient(to right, #449515, #B6C867);
   width:80%;
 `;
 
